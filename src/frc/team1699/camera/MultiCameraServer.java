@@ -8,7 +8,7 @@
  * @author thatging3rkid, FIRST Team 1699
  * @author squirlemaster42, FIRST Team 1699 
  * 
- * This class allows us to switch between two cameras
+ * This class allows us to switch between two or more cameras
  */
 package frc.team1699.camera;
 
