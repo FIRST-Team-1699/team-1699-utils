@@ -11,9 +11,9 @@ public class AngleFinder {
 //Must test
 	public double getAngle(int centerX, double distance){
 		if(centerX - imageCenter >= 0) {
-			return Math.atan(Math.toDegrees((centerX - imageCenter) / distance));
+			return Math.atan(Math.toRadians(((centerX - imageCenter) / distance)));
 		}else{
-			return Math.atan(Math.toDegrees((centerX - imageCenter) / distance)) * -1;
+			return Math.atan(Math.toRadians((Math.abs((centerX - imageCenter) / distance)))) * -1;
 		}
 		
 	}
