@@ -13,12 +13,9 @@
 package frc.team1699.vision;
 
 import com.ni.vision.NIVision;
-import com.ni.vision.NIVision.DrawMode;
 import com.ni.vision.NIVision.Image;
-import com.ni.vision.NIVision.ShapeMode;
 
 import edu.wpi.first.wpilibj.CameraServer;
-import frc.team1699.inireader.iniReader;
 
 public class MultiCameraServer {
 	
