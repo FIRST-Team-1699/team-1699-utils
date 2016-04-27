@@ -3,7 +3,7 @@ package frc.team1699.vision;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-public class Vision {
+public class Vision{
 	
 	private int imageWidth;
 	private int imageHeight;
@@ -32,6 +32,10 @@ public class Vision {
 		}
 	}
 
+	public boolean[][] getImagePixels() {
+		return imagePixels;
+	}
+
 	public int getImageWidth() {
 		return imageWidth;
 	}
@@ -47,13 +51,4 @@ public class Vision {
 	public void setImageHeight(int imageHeight) {
 		this.imageHeight = imageHeight;
 	}
-
-	public boolean[][] getImagePixles() {
-		return imagePixels;
-	}
-
-	public void setImagePixles(boolean[][] imagePixles) {
-		this.imagePixels = imagePixles;
-	}
-
 }
