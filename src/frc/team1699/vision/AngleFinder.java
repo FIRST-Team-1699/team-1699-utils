@@ -1,6 +1,8 @@
 package frc.team1699.vision;
 
-public class AngleFinder {
+public class AngleFinder 
+
+{
 	
 	private int imageCenter;
 	
@@ -16,5 +18,13 @@ public class AngleFinder {
 			return Math.atan(Math.toRadians((Math.abs((centerX - imageCenter) / distance)))) * -1;
 		}
 		
+	}
+
+	public int getImageCenter() {
+		return imageCenter;
+	}
+
+	public void setImageCenter(int imageCenter) {
+		this.imageCenter = imageCenter;
 	}
 }

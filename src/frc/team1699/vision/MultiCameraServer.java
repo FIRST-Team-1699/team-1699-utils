@@ -28,22 +28,6 @@ public class MultiCameraServer {
 	private int selectedCamera = 0;
 	private boolean firstTime = true;
 	
-	// Reads settings from an ini
-	private iniReader cServerSettings = new iniReader("1699-cameraServer.ini");
-	private int chairGap = (int) cServerSettings.getValue("chairGap");
-	private int chairSize = (int) cServerSettings.getValue("chairSize");
-	private int chairLength = (int) cServerSettings.getValue("chairLength");
-	private float chairColor = (float) cServerSettings.getValue("chairColor");
-	int xCenter = (int) cServerSettings.getValue("xCenter");
-	int yCenter = (int) cServerSettings.getValue("yCenter");
-	
-	// Makes the boxes for a crosshair
-	// NIVision.Rect(int top, int left, int height, int width) 
-	NIVision.Rect topRect = new NIVision.Rect((int) (xCenter - chairGap - .5 * chairLength), (int) (yCenter - (chairSize * .5)), chairLength, chairGap);
-	NIVision.Rect rightRect = new NIVision.Rect((int) (xCenter + (chairSize * .5)), (yCenter - chairGap - chairLength), chairGap, chairLength);
-	NIVision.Rect botRect = new NIVision.Rect((xCenter + 2 * chairGap), (int) (yCenter - (chairSize * .5)), chairLength, chairGap);
-	NIVision.Rect leftRect = new NIVision.Rect((int) (xCenter + (chairSize * .5)), (yCenter + chairGap), chairGap, chairLength);
-	
 	public MultiCameraServer(int camCount){
 		frame = NIVision.imaqCreateImage(NIVision.ImageType.IMAGE_RGB, 0);
 		_cameraCount = camCount;
@@ -51,11 +35,6 @@ public class MultiCameraServer {
 	
 	public void run(){
 		NIVision.IMAQdxGrab(_session, frame, 1);
-		// Writes crosshair boxes
-		NIVision.imaqDrawShapeOnImage(frame, frame, topRect, DrawMode.PAINT_VALUE, ShapeMode.SHAPE_RECT, 0.0f);
-		NIVision.imaqDrawShapeOnImage(frame, frame, rightRect, DrawMode.PAINT_VALUE, ShapeMode.SHAPE_RECT, 1.0f);
-		NIVision.imaqDrawShapeOnImage(frame, frame, botRect, DrawMode.PAINT_VALUE, ShapeMode.SHAPE_RECT, 2.0f);
-		NIVision.imaqDrawShapeOnImage(frame, frame, leftRect, DrawMode.PAINT_VALUE, ShapeMode.SHAPE_RECT, 0.0f);
 		CameraServer.getInstance().setImage(frame);
 	}
 	
