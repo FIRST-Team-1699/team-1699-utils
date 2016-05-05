@@ -7,10 +7,8 @@ public class Vision{
 	
 	private int imageWidth, imageHeight, minWidth, maxWidth, minHeight, maxHeight;
 	private boolean[][] imagePixels;
-	private boolean stop = false;
-	private int iteration = 0;
-	private int heightFound = 0;
-	private int widthFound = 0;
+	private int xStart = -1;
+	private int yStart = -1;
 
 	public Vision(int imageWidth, int imageHeight, int minWidth, int maxWidth, int minHeight, int maxHeight) {
 		super();
@@ -46,21 +44,14 @@ public class Vision{
 		for(i = 0; i < imageWidth; i++){
 			for(j = 0; j < imageHeight; j++){
 				if(imagePixels[i][j]){
-					while(!stop){
-						if(imagePixels[i + iteration][j] && (i + iteration < imageWidth)){
-							
-						}else if(imagePixels[i - iteration][j] && (i - iteration > imageWidth)){
-							
-						}else if(imagePixels[i][j + iteration] && (j + iteration < imageHeight)){
-							
-						}else if(imagePixels[i][j - iteration] && (j - iteration > imageHeight)){
-							
-						}else{
-							stop = true;
-						}
-					}
+					xStart = i;
+					yStart = j;
+					break;
 				}
-			}		
+			}	
+			if((xStart >= 0) && (yStart >= 0)){
+				break;
+			}
 		}
 	}
 
