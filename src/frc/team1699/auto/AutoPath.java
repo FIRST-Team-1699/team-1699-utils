@@ -39,7 +39,7 @@ public class AutoPath {
 		}
 	}
 	
-	public void generateDirections(AutoChoice c){
+	public void generateDirections(){
 		
 	}
 }
