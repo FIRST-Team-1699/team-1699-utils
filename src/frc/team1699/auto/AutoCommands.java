@@ -21,4 +21,12 @@ public abstract class AutoCommands {
 		autoCommands.add(new Command(name));
 	}
 	
+	public void callCommand(String name){
+		for(int i = 0; i < autoCommands.size(); i++){
+			if(autoCommands.get(i).getName().equals(name)){
+				//Run command
+			}
+		}
+	}
+	
 }
