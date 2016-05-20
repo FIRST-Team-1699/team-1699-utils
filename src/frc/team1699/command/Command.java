@@ -1,6 +1,6 @@
 package frc.team1699.command;
 
-public class Command {
+public abstract class Command {
 	
 	String name;
 	
@@ -8,4 +8,15 @@ public class Command {
 		this.name = name;
 	}
 	
+	public abstract void init();
+	public abstract void run();
+	public abstract void isFinished();
+	
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public String getName(){
+		return name;
+	}
 }
