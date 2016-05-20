@@ -17,8 +17,8 @@ public abstract class AutoCommands {
 	public abstract void turnLeft(int distance);
 	public abstract void turnRight(int distance);
 	
-	public void addCommand(String name){
-		autoCommands.add(new Command(name));
+	public void addCommand(Command c){
+		autoCommands.add(c);
 	}
 	
 	public void callCommand(String name){
