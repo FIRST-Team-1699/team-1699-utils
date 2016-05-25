@@ -1,4 +1,4 @@
-package frc.team1699.vision;
+package org.usfirst.frc.team1699.vision;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;

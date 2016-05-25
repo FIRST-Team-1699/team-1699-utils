@@ -1,8 +1,8 @@
-package frc.team1699.auto;
+package org.usfirst.frc.team1699.auto;
 
 import java.util.ArrayList;
 
-import frc.team1699.command.Command;
+import org.usfirstfrc.team1699.command.Command;
 
 public abstract class AutoCommands {
 	

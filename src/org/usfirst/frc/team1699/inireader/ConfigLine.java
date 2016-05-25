@@ -7,7 +7,7 @@
  *
  */
 
-package frc.team1699.inireader;
+package org.usfirst.frc.team1699.inireader;
 
 public class ConfigLine {
 

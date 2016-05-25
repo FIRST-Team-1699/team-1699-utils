@@ -1,4 +1,4 @@
-package frc.team1699.auto;
+package org.usfirst.frc.team1699.auto;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

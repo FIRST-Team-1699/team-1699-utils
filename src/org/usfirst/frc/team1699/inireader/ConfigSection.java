@@ -6,7 +6,7 @@
  * A class that represents a section of a configuration file.
  * 
  */
-package frc.team1699.inireader;
+package org.usfirst.frc.team1699.inireader;
 
 import java.util.ArrayList;
 import java.util.Arrays;

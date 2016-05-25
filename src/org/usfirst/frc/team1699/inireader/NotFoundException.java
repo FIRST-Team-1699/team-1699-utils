@@ -6,7 +6,7 @@
  * This exception is thrown when the object you are looking for is not found. 
  */
 
-package frc.team1699.inireader;
+package org.usfirst.frc.team1699.inireader;
 
 public class NotFoundException extends RuntimeException {
 

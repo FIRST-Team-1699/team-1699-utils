@@ -10,7 +10,7 @@
  * 
  * This class allows us to switch between two or more cameras
  */
-package frc.team1699.vision;
+package org.usfirst.frc.team1699.vision;
 
 import com.ni.vision.NIVision;
 import com.ni.vision.NIVision.Image;
