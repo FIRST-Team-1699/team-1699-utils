@@ -1,8 +1,7 @@
 package frc.team1699.test;
 
 import org.junit.Test;
-
-import frc.team1699.math.RoboMath;
+import org.usfirst.frc.team1699.math.RoboMath;
 
 public class AngleFinderTest {
 	

@@ -8,7 +8,7 @@
  * v2.0-alpha, released on 5/18/2016
  *
  */
-package frc.team1699.inireader;
+package org.usfirst.frc.team1699.inireader;
 
 import java.io.File;
 import java.io.FileNotFoundException;
