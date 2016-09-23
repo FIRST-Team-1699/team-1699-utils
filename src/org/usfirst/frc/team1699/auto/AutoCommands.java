@@ -14,8 +14,9 @@ public abstract class AutoCommands {
 	
 	public abstract void forward(int distance);
 	public abstract void backward(int distance);
-	public abstract void turnLeft(int distance);
-	public abstract void turnRight(int distance);
+	public abstract void turnLeft(int degree);
+	public abstract void turnRight(int degree);
+	public abstract void function();
 	
 	public void addCommand(Command c){
 		autoCommands.add(c);
