@@ -25,20 +25,22 @@ public class BetterSpark extends Spark implements SpeedController, BetterControl
 
 	
 	// Getters and Setters
-	public void reverseOutput() {this.reversed = !reversed;}
-	public boolean getreverseOutput() {return this.reversed;}
-	public void setreverseOutput(boolean _reversed) {this.reversed = _reversed;}
+	public void reverseOutput() {
+		this.reversed = !reversed;
+	}
+	public boolean getreverseOutput() {
+		return this.reversed;
+	}
+	public void setreverseOutput(boolean _reversed) {
+		this.reversed = _reversed;
+	}
 
 	
 	// Methods
-	public void set(double speed)
-	{
-		if (reversed == true)
-		{
+	public void set(double speed) {
+		if (reversed) {
 			super.set(-1 * speed);
-		}
-		else if (reversed == false)
-		{
+		} else if (reversed) {
 			super.set(1 * speed);
 		}
 	}

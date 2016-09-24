@@ -9,9 +9,9 @@ package org.usfirst.frc.team1699.bettercontrollers;
 
 import edu.wpi.first.wpilibj.SpeedController;
 
-public interface BetterController extends SpeedController
-{
+public interface BetterController extends SpeedController{
 	public void reverseOutput();
 	public boolean getreverseOutput();
 	public void setreverseOutput(boolean _reversed);
+	public void set(double speed);
 }

@@ -2,22 +2,24 @@ package org.usfirstfrc.team1699.command;
 
 public abstract class Command {
 	
-	String name;
+	private String name;
+	private int id;
 	
-	//id is used for commands run in auto. It should be set to and interger value that corrisponds to the value used when wanting to call the command from the autonomous file.
+	//id is used for commands run in auto. It should be set to and integer value that corresponds to the value used when wanting to call the command from the autonomous file.
 	public Command(String name, int id){
 		this.name = name;
+		this.id = id;
 	}
 	
 	public abstract void init();
 	public abstract void run();
-	public abstract void isFinished();
-	
-	public void setName(String name){
-		this.name = name;
-	}
+	public abstract boolean isFinished();
 	
 	public String getName(){
 		return name;
+	}
+	
+	public int getId(){
+		return id;
 	}
 }
