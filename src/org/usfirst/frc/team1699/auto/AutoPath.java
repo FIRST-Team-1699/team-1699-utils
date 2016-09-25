@@ -6,11 +6,11 @@ public class AutoPath {
 	private int[][] fileAsString;
 	private int width, height;
 	
-	public AutoPath(String path, int width, int height){
+	public AutoPath(String path, int width){
 		this.path = path;
 		this.width = width;
 		this.height = height;
-		fileAsString = Utils.loadFileAsArray(path, width, height);
+		fileAsString = Utils.loadFileAsArray(path, width);
 	}
 	
 	
