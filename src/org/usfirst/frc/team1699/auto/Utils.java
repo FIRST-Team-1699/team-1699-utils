@@ -16,16 +16,15 @@ public class Utils {
 		}
 	}
 	
-	public static int[][] loadFileAsArray(String path, int width, int height){
-		int[][] fileAsString = new int[width][height];
+	public static int[] loadFileAsArray(String path, int width){
+		int[] fileAsString = new int[width];
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(path));
 			String line;
-			int i = 0;
 			while((line = br.readLine()) != null){
 				String[] l = line.split(" ");
 				for(int j = 0; j < l.length; j++){
-					fileAsString[i][j] = Utils.parseInt(l[j]);
+					fileAsString[j] = Utils.parseInt(l[j]);
 				}
 				
 			}
