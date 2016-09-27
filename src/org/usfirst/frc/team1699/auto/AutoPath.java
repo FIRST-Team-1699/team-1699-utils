@@ -4,12 +4,11 @@ public class AutoPath {
 	
 	private String path;
 	private int[] fileAsString;
-	private int width, height;
+	private int width;
 	
 	public AutoPath(String path, int width){
 		this.path = path;
 		this.width = width;
-		this.height = height;
 		fileAsString = Utils.loadFileAsArray(path, width);
 	}
 	
