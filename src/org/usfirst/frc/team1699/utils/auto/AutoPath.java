@@ -1,4 +1,4 @@
-package org.usfirst.frc.team1699.auto;
+package org.usfirst.frc.team1699.utils.auto;
 
 public class AutoPath {
 	
@@ -12,9 +12,8 @@ public class AutoPath {
 		fileAsString = Utils.loadFileAsArray(path, width);
 	}
 	
-	
-	
 	public void generateDirections(){
+		
 		
 	}
 }

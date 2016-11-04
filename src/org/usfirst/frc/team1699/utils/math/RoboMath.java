@@ -1,4 +1,4 @@
-package org.usfirst.frc.team1699.math;
+package org.usfirst.frc.team1699.utils.math;
 
 public class RoboMath {
 	

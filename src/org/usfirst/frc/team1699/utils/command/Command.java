@@ -1,4 +1,4 @@
-package org.usfirst.frc.team1699.command;
+package org.usfirst.frc.team1699.utils.command;
 
 public abstract class Command {
 	
