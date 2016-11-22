@@ -5,7 +5,7 @@
  * @author BluBurryMuffin
  * @author squirlemaster42
  */
- 
+package org.usfirst.frc.team1699.utils.math;
 
 public class AngleFinder {
     
