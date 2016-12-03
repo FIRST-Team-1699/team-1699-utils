@@ -7,6 +7,8 @@
  */
 package org.usfirst.frc.team1699.utils.math;
 
+import edu.wpi.first.wpilibj.Ultrasonic;
+
 public class AngleFinder {
     
     private double goalHeight; //Holds the height of the goal
@@ -50,7 +52,7 @@ public class AngleFinder {
      * 
      * @return goalHeight
      */
-    public void getGoalHeight() {
+    public double getGoalHeight() {
         return goalHeight;
     }
 
@@ -60,7 +62,7 @@ public class AngleFinder {
      * @param goalHeight
      */
     public void setGoalHeight(int goalHeight) {
-        this.goalHeight = goalheight;
+        this.goalHeight = goalHeight;
     }
     
     /**
@@ -68,7 +70,7 @@ public class AngleFinder {
      * 
      * @return ultra
      */
-    public void getUltra() {
+    public Ultrasonic getUltra() {
         return ultra;
     }
 
@@ -86,7 +88,7 @@ public class AngleFinder {
      * 
      * @return targetX
      */    
-    public void getTargetX() {
+    public int getTargetX() {
         return targetX;
     }
 
@@ -101,10 +103,11 @@ public class AngleFinder {
 
     /**
      * Used to get targetY
+     * @return 
      * 
      * @return targetY
      */    
-    public void getTargetY() {
+    public int getTargetY() {
         return targetY;
     }
 
@@ -146,10 +149,10 @@ public class AngleFinder {
         int yDifference = targetY - centerY; //Holds the distance between centerY and targetY
         double angle = 0.0; //Holds the angle that the robot must rotate to meet centerY
         int isNegative = 1; //Holds whether or not yDifference should be negative
-        if(xDifference < 0) {
+        if(yDifference < 0) {
             isNegative = -1;
         }
-        yDifference = Math.abs(xDifference);
+        yDifference = Math.abs(yDifference);
         return angle * isNegative;
     }
 
