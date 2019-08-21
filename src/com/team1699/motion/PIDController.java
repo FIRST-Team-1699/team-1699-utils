@@ -4,7 +4,7 @@ public class PIDController {
 
     private double kP, kI, kD;
 
-    public PIDController(final double kP, final double kI, final double kD){
+    public PIDController(final double kP, final double kI, final double kD) {
         this.kP = kP;
         this.kI = kI;
         this.kD = kD;
@@ -18,7 +18,7 @@ public class PIDController {
      * @param //TODO Comment
      * @return Returns the voltage needed to adjust the system to its desired state
      */
-    public double update(double currentCount, boolean limit, boolean isEnabled){5
+    public double update(double currentCount, boolean limit, boolean isEnabled) {
         return 0.0;
     }
 
