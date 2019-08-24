@@ -91,6 +91,7 @@ public class CrashTracker {
     }
 
     private void log(String message, Throwable exception){
+        //TODO Create new directory if one has not already been created to avoid crashed
         try(PrintWriter writer = new PrintWriter(new FileWriter(filePath, true))){
             writer.printf("%s, %s, %s", UUID.randomUUID(), format.format(new Date()), message);
 
